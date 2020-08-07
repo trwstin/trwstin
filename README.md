@@ -1,4 +1,4 @@
-## 👋 ALLO, THIS IS TRUSTIN 👋
+## 👋 Oh? You are approaching me? 👋
 
 #### more about this cs reject:
 - 🎓 NUS BZA 2024
