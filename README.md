@@ -1,12 +1,12 @@
 ## 👋 ALLO, THIS IS TRUSTIN 👋
 
-#### more about this cs reject:
+### more about this cs reject:
 - 🎓 NUS BZA 2024
 - 🎮 Dota 2, Wuxia RPGs, VNs
 - 📚 I read manga and light novels
 - 🙅 I am not a weeb
 
-#### hmu or whatever:
+### hmu or whatever:
 
 [<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
@@ -14,7 +14,7 @@
 [<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 <br />
 
-#### i can do stuff:
+### i can do stuff:
 
 <img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
 <img align="left" alt="PyCharm" width="26px" src="https://confluence.jetbrains.com/download/attachments/10422155/PYH?version=2&modificationDate=1449750902000&api=v2.png" />
