@@ -2,8 +2,8 @@
 
 ### more about this cs reject:
 - 🎓 **NUS BZA 2024**
-- 🎮 **Dota 2, Wuxia RPGs, VNs**
-- 📚 **I read manga and light novels**
+- 🎮 **Casual Gamer**
+- 📚 **I read manga and wuxia novels**
 - 🙅 **_I am not a weeb_**
 
 ### hmu or whatever:
