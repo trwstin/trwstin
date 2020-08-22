@@ -1,16 +1,16 @@
-## 👋 Oh? You are approaching me? 👋
+## 👋 Hey there! I'm Trustin Ang. 👋
 
-### details you will forget:
+### about me:
 - 🎓 **NUS Business Analytics**
 - 🎮 **Casual Gamer, Hardcore Mugger**
 - 📚 **I read manga and wuxia novels**
 - 🙅 **_I am not a weeb_**
 
-### hmu or whatever:
+### social media:
 
-[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 <br />
 
 ### i can do stuff:
