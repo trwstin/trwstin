@@ -1,8 +1,8 @@
 ## 👋 Oh? You are approaching me? 👋
 
 ### more about this cs reject:
-- 🎓 **NUS BZA 2024**
-- 🎮 **Casual Gamer**
+- 🎓 **NUS Business Analytics**
+- 🎮 **Casual Gamer, Hardcore Mugger**
 - 📚 **I read manga and wuxia novels**
 - 🙅 **_I am not a weeb_**
 
