@@ -1,6 +1,6 @@
 ## 👋 Oh? You are approaching me? 👋
 
-### more about this cs reject:
+### details you will forget:
 - 🎓 **NUS Business Analytics**
 - 🎮 **Casual Gamer, Hardcore Mugger**
 - 📚 **I read manga and wuxia novels**
