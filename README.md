@@ -1,4 +1,4 @@
-## 👋 hello! i'm Trustin Ang. 👋
+## 👋 Hello! I'm Trustin Ang. 👋
 
 ### about me:
 - 🎓 **NUS Business Analytics**
