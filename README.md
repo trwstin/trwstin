@@ -2,9 +2,9 @@
 
 ### About Me:
 - 🎓 **NUS Business Analytics**
-- 🎮 **Casual Gamer, Hardcore Mugger**
-- 📚 **I read manga and wuxia novels**
-- 🙅 **_I am not a weeb_**
+- 🎮 **DOTA 2, Guild Wars 2, Total War: Warhammer 2**
+- 🐒 **Wildlife Rescue Volunteer**
+- 🙅 **_I am not a weeb, definitely not_**
 
 ### Social Media:
 
