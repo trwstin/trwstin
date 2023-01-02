@@ -19,6 +19,7 @@
 <img align="left" alt="R" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" />
 <img align="left" alt="Python" width="26px" src="https://img.pngio.com/python-png-file-png-mart-python-png-1152_1150.png" />
 <img align="left" alt="Flask" width="26px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg" />
+<img align="left" alt="ReactJS" width="26px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
 <img align="left" alt="MongoDB" width="26px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" />
 <img align="left" alt="NodeJS" width="26px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" />
 <img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
@@ -36,5 +37,5 @@
 
 [website]: https://trwstin.github.io
 [instagram]: https://instagram.com/trwstin
-[linkedin]: https://linkedin.com/in/trustinayx
+[linkedin]: https://linkedin.com/in/trwstin
 [behance]: https://behance.net/trwstin
