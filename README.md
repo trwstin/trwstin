@@ -32,7 +32,7 @@
 <br />
 
 ---
-<img align="left" src="https://github-readme-stats.vercel.app/api?username=trwstin&show_icons=true&hide_border=true" />
+<img align="left" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=trwstin&show_icons=true&hide_border=true" />
 
 
 [website]: https://trwstin.github.io
