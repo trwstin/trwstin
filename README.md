@@ -41,4 +41,4 @@
 [instagram]: https://instagram.com/trwstin
 [linkedin]: https://linkedin.com/in/trwstin
 [behance]: https://behance.net/trwstin
-[monkeytype.badge]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fmonkeytype-badge-vhd5lan7mmhz.runkit.sh
+[monkeytype.badge]: https://img.shields.io/endpoint?style=for-the-badge&url=https%3A%2F%2Fmonkeytype-badge-vhd5lan7mmhz.runkit.sh%3Fmessage%3D157%2520WPM%26label%3Dmonkeytype%26logoVariant%3Done
