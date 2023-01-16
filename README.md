@@ -6,6 +6,8 @@
 - 🐒 **Wildlife Rescue Volunteer & Sustainability Advocate**
 - 🙅 **_Definitely not a weeb_**
 
+[![monkeytype.badge]](https://monkeytype.com/)
+
 ### My Links:
 
 [<img align="left" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
@@ -39,3 +41,4 @@
 [instagram]: https://instagram.com/trwstin
 [linkedin]: https://linkedin.com/in/trwstin
 [behance]: https://behance.net/trwstin
+[monkeytype.badge]: https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fmonkeytype-badge-vhd5lan7mmhz.runkit.sh
