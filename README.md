@@ -35,6 +35,7 @@
   <details open>
     <summary>Frameworks:</summary>
     <br />
+    <img align="left" alt="Plotly" width="40px" src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" />
     <img align="left" alt="Flask" width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg" />
     <img align="left" alt="ReactJS" width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
     <img align="left" alt="NodeJS" width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" />
