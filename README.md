@@ -1,11 +1,10 @@
-## 👋 Hello! I'm Trustin. 👋
+## Trustin's Humble Profile
 
 ### Links:
 
-[<img align="left" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" width="22px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/behance/behance-plain.svg" />][behance]
-[<img align="left" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+[<img align="left" width="22px" src="https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/WWW.svg" />][website]
+[<img align="left" width="22px" src="https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/LinkedIN.svg" />][linkedin]
+[<img align="left" width="22px" src="https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/Instagram.svg" />][instagram]
 <br />
 
 ### Skills:
