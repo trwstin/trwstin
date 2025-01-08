@@ -1,6 +1,6 @@
 ## My Humble Profile
-#### Hey there, thanks for visiting my page. I'm currently working on a computer vision project to help avid travellers like myself pack luggages more efficiently. 
-#### In my free time, I enjoy contributing to open source projects like [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [monkeytype](https://github.com/monkeytypegame/monkeytype). During school breaks, I occasionally freelance as a plugin developer for Forge-based Minecraft servers.
+#### Hey there, thanks for visiting my page. I am currently an exchange student in Netherlands, reading courses under TU Delft's MSc Computer Science programme. 
+#### In my free time, I enjoy contributing to open source projects like [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [monkeytype](https://github.com/monkeytypegame/monkeytype). I also enjoy building projects around my gaming interests - right now I am building an interactive tool that helps players select the most optimal moves for winning Pokemon Showdown battles.
 
 ### Links:
 
