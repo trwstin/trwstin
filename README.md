@@ -8,7 +8,6 @@
 
 [<img align="left" width="22px" src="https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/WWW.svg" />][website]
 [<img align="left" width="22px" src="https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/LinkedIN.svg" />][linkedin]
-[<img align="left" width="22px" src="https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/Instagram.svg" />][instagram]
 <br />
 
 [website]: https://trwstin.github.io
