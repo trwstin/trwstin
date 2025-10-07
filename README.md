@@ -19,6 +19,15 @@
 <!-- MONKEYTYPE:START -->
 ### Monkeytype Personal Bests (wambo)
 
-Fetching latest PBs...
-<!-- The GitHub Action will replace everything between MONKEYTYPE:START and MONKEYTYPE:END with a rendered dashboard. -->
+#### Time tests
+| 15s | 30s | 60s | 120s |
+| --- | --- | --- | --- |
+| 135 WPM (100%) | 136 WPM (99%) | 115 WPM (99%) | 105 WPM (96%) |
+
+#### Word tests
+| 10w | 25w | 50w | 100w |
+| --- | --- | --- | --- |
+| 160 WPM (100%) | 141 WPM (98%) | 134 WPM (100%) | 124 WPM (97%) |
+
+_Last updated: 2025-10-07 10:36 UTC_
 <!-- MONKEYTYPE:END -->
