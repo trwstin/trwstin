@@ -6,142 +6,131 @@ const path = require("path");
 const USERNAME = process.env.MONKEYTYPE_USERNAME || "wambo";
 const API_KEY = process.env.MONKEYTYPE_API_KEY;
 
-if (!API_KEY) {
-  console.error("Missing MONKEYTYPE_API_KEY in environment. Exiting.");
-  process.exit(1);
-}
-
-const endpoint = `https://api.monkeytype.com/users/${encodeURIComponent(
-  USERNAME
-)}/personalBests`;
-
 const START = "<!-- MONKEYTYPE:START -->";
 const END = "<!-- MONKEYTYPE:END -->";
 const README_PATH = path.resolve(process.cwd(), "README.md");
 
+const endpoint = `https://api.monkeytype.com/users/${encodeURIComponent(
+  USERNAME
+)}/profile`;
+
 function escapeRegExp(s) {
-  return s.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&");
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-function getNumber(val) {
-  if (val === undefined || val === null) return undefined;
-  const n = parseInt(String(val).replace(/[^\\d]/g, ""), 10);
-  return Number.isFinite(n) ? n : undefined;
-}
-
-function pickPbs(items, mode, allowed) {
-  const best = new Map(); // key: mode2, value: pb
-  for (const e of items) {
-    const m = e.mode || e.type || e.testType;
-    const m2 =
-      getNumber(e.mode2) ??
-      getNumber(e.mode2Val) ??
-      getNumber(e.words) ??
-      getNumber(e.time) ??
-      getNumber(e.duration);
-
-    if (String(m).toLowerCase() !== String(mode).toLowerCase()) continue;
-    if (!allowed.includes(m2)) continue;
-
+function bestOf(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) return null;
+  // highest WPM; fall back gracefully if fields are missing
+  let best = null;
+  for (const e of arr) {
     const wpm =
-      e.wpm ??
-      e.wpmHigh ??
-      e.wpm_value ??
-      (e.stats && e.stats.wpm) ??
-      undefined;
-
-    const accRaw =
-      e.acc ??
-      e.accuracy ??
-      e.accu ??
-      (e.stats && (e.stats.acc || e.stats.accuracy));
-
-    const acc = accRaw !== undefined ? Math.round(accRaw) : undefined;
-
-    const cur = best.get(m2);
-    if (!cur || (typeof wpm === "number" && wpm > (cur.wpm ?? -Infinity))) {
-      best.set(m2, { wpm, acc, mode2: m2 });
+      typeof e?.wpm === "number"
+        ? e.wpm
+        : typeof e?.wpmHigh === "number"
+        ? e.wpmHigh
+        : undefined;
+    if (typeof wpm !== "number") continue;
+    if (!best || wpm > best.wpm) {
+      best = {
+        wpm,
+        acc:
+          typeof e?.acc === "number"
+            ? Math.round(e.acc)
+            : typeof e?.accuracy === "number"
+            ? Math.round(e.accuracy)
+            : undefined,
+      };
     }
   }
-  return allowed.map((a) => best.get(a) || null);
+  return best;
 }
 
 function fmtCell(pb) {
-  if (!pb || pb.wpm === undefined) return "—";
+  if (!pb) return "—";
   const wpm = Math.round(pb.wpm);
   const acc = pb.acc !== undefined ? `${pb.acc}%` : "—";
   return `${wpm} WPM (${acc})`;
 }
 
-function buildTables(data) {
-  const timeOrder = [15, 30, 60, 120];
-  const wordOrder = [10, 25, 50, 100];
+function buildTables(personalBests) {
+  // Expected structure from API profile: { time: { "15": [..], ... }, words: {...} }
+  const time = personalBests?.time ?? {};
+  const words = personalBests?.words ?? {};
 
-  const times = pickPbs(data, "time", timeOrder);
-  const words = pickPbs(data, "words", wordOrder);
+  const timeBuckets = ["15", "30", "60", "120"];
+  const wordBuckets = ["10", "25", "50", "100"];
 
-  const timeHeader = `| ${timeOrder.map((s) => `${s}s`).join(" | ")} |`;
-  const timeSep = `| ${timeOrder.map(() => "---").join(" | ")} |`;
-  const timeRow = `| ${times.map(fmtCell).join(" | ")} |`;
+  const timeRow = timeBuckets.map((k) => fmtCell(bestOf(time[k]))).join(" | ");
+  const wordRow = wordBuckets
+    .map((k) => fmtCell(bestOf(words[k])))
+    .join(" | ");
 
-  const wordHeader = `| ${wordOrder.map((w) => `${w}w`).join(" | ")} |`;
-  const wordSep = `| ${wordOrder.map(() => "---").join(" | ")} |`;
-  const wordRow = `| ${words.map(fmtCell).join(" | ")} |`;
-
-  return [
+  const md = [
     "#### Time tests",
-    timeHeader,
-    timeSep,
-    timeRow,
+    `| ${timeBuckets.map((s) => `${s}s`).join(" | ")} |`,
+    `| ${timeBuckets.map(() => "---").join(" | ")} |`,
+    `| ${timeRow} |`,
     "",
     "#### Word tests",
-    wordHeader,
-    wordSep,
-    wordRow,
-  ].join("\\n");
+    `| ${wordBuckets.map((w) => `${w}w`).join(" | ")} |`,
+    `| ${wordBuckets.map(() => "---").join(" | ")} |`,
+    `| ${wordRow} |`,
+  ].join("\n");
+
+  return md;
 }
 
-function wrapSection(inner) {
+function wrapSection(username, inner) {
   return [
     START,
-    `### Monkeytype Personal Bests (${USERNAME})`,
+    `### Monkeytype Personal Bests (${username})`,
     "",
     inner,
     "",
-    `_Last updated: ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC_`,
+    `_Last updated: ${new Date().toISOString()
+      .slice(0, 16)
+      .replace("T", " ")} UTC_`,
     END,
-  ].join("\\n");
+  ].join("\n");
+}
+
+async function fetchProfile(url, key) {
+  const headers = {};
+  if (key) headers["Authorization"] = `ApeKey ${key}`;
+  const res = await fetch(url, { headers });
+  const text = await res.text();
+  let json;
+  try {
+    json = JSON.parse(text);
+  } catch {
+    throw new Error(`Invalid JSON response (${res.status}): ${text}`);
+  }
+  if (!res.ok) {
+    throw new Error(`API error ${res.status}: ${text}`);
+  }
+  // The public API typically returns { data: { ...profile } }
+  return json?.data ?? json;
 }
 
 async function main() {
-  const res = await fetch(endpoint, {
-    headers: { Authorization: `ApeKey ${API_KEY}` },
-  });
-  if (!res.ok) {
-    console.error(`API error ${res.status}: ${await res.text()}`);
-    process.exit(1);
-  }
-  const json = await res.json();
-
-  const list =
-    (json && (json.personalBests || json.data)) ||
-    (Array.isArray(json) ? json : []);
-
-  if (!Array.isArray(list)) {
-    console.error("Unexpected API response shape.");
-    process.exit(1);
+  const profile = await fetchProfile(endpoint, API_KEY);
+  const pbs = profile?.personalBests;
+  if (!pbs) {
+    console.error("No personalBests found in profile response.");
   }
 
-  const section = wrapSection(buildTables(list));
+  const section = wrapSection(USERNAME, buildTables(pbs || {}));
 
   const original = fs.readFileSync(README_PATH, "utf8");
-  const pattern = new RegExp(`${escapeRegExp(START)}[\\s\\S]*?${escapeRegExp(END)}`);
+  const pattern = new RegExp(
+    `${escapeRegExp(START)}[\\s\\S]*?${escapeRegExp(END)}`
+  );
   let updated;
   if (pattern.test(original)) {
     updated = original.replace(pattern, section);
   } else {
-    const spacer = original.endsWith("\\n") ? "" : "\\n";
-    updated = `${original}${spacer}\\n${section}\\n`;
+    const spacer = original.endsWith("\n") ? "" : "\n";
+    updated = `${original}${spacer}\n${section}\n`;
   }
 
   if (updated !== original) {
@@ -153,6 +142,6 @@ async function main() {
 }
 
 main().catch((e) => {
-  console.error(e);
+  console.error(e.message || e);
   process.exit(1);
 });
