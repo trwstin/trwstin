@@ -83,7 +83,7 @@ function buildTables(personalBests) {
 function wrapSection(username, inner) {
   return [
     START,
-    `### Monkeytype Personal Bests (${username})`,
+  `### [Monkeytype](https://monkeytype.com/profile/${username}) Personal Bests:`,
     "",
     inner,
     "",
