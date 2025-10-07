@@ -20,19 +20,18 @@ const END = "<!-- MONKEYTYPE:END -->";
 const README_PATH = path.resolve(process.cwd(), "README.md");
 
 function escapeRegExp(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return s.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&");
 }
 
 function getNumber(val) {
   if (val === undefined || val === null) return undefined;
-  const n = parseInt(String(val).replace(/[^\d]/g, ""), 10);
+  const n = parseInt(String(val).replace(/[^\\d]/g, ""), 10);
   return Number.isFinite(n) ? n : undefined;
 }
 
 function pickPbs(items, mode, allowed) {
   const best = new Map(); // key: mode2, value: pb
   for (const e of items) {
-    // Common fields in Monkeytype data
     const m = e.mode || e.type || e.testType;
     const m2 =
       getNumber(e.mode2) ??
@@ -99,7 +98,7 @@ function buildTables(data) {
     wordHeader,
     wordSep,
     wordRow,
-  ].join("\n");
+  ].join("\\n");
 }
 
 function wrapSection(inner) {
@@ -111,7 +110,7 @@ function wrapSection(inner) {
     "",
     `_Last updated: ${new Date().toISOString().slice(0, 16).replace("T", " ")} UTC_`,
     END,
-  ].join("\n");
+  ].join("\\n");
 }
 
 async function main() {
@@ -141,8 +140,8 @@ async function main() {
   if (pattern.test(original)) {
     updated = original.replace(pattern, section);
   } else {
-    const spacer = original.endsWith("\n") ? "" : "\n";
-    updated = `${original}${spacer}\n${section}\n`;
+    const spacer = original.endsWith("\\n") ? "" : "\\n";
+    updated = `${original}${spacer}\\n${section}\\n`;
   }
 
   if (updated !== original) {
