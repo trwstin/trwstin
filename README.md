@@ -17,7 +17,7 @@
 
 
 <!-- MONKEYTYPE:START -->
-### Monkeytype Personal Bests (wambo)
+### [Monkeytype](https://monkeytype.com/profile/wambo) Personal Bests:
 
 #### Time tests
 | 15s | 30s | 60s | 120s |
@@ -29,5 +29,5 @@
 | --- | --- | --- | --- |
 | 160 WPM (100%) | 141 WPM (98%) | 134 WPM (100%) | 124 WPM (97%) |
 
-_Last updated: 2025-10-07 10:36 UTC_
+_Last updated: 2025-10-07 10:40 UTC_
 <!-- MONKEYTYPE:END -->
