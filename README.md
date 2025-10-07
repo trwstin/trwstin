@@ -14,9 +14,3 @@
 
 [website]: https://trwstin.github.io
 [linkedin]: https://linkedin.com/in/trwstin
-
-### Monkeytype Personal Bests (wambo)
-
-<!-- MONKEYTYPE:START -->
-Fetching latest PBs...
-<!-- MONKEYTYPE:END -->
