@@ -27,7 +27,7 @@
 #### Word tests
 | 10w | 25w | 50w | 100w |
 | --- | --- | --- | --- |
-| 160 WPM (100%) | 154 WPM (100%) | 136 WPM (100%) | 124 WPM (97%) |
+| 160 WPM (100%) | 154 WPM (100%) | 136 WPM (100%) | 133 WPM (100%) |
 
-_Last updated: 2025-10-20 02:51 UTC_
+_Last updated: 2025-10-21 02:45 UTC_
 <!-- MONKEYTYPE:END -->
