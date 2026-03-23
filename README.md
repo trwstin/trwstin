@@ -1,6 +1,6 @@
 
 #### NUS Business Analytics Graduate, working in IT.
-#### Currently exploring Agentic AI in Edge Computing - think lightweight OpenClaw on a SBC with wacky sensors doing wacky stuff.
+#### Currently exploring Agentic AI in Edge Computing.
 
 ---
 
